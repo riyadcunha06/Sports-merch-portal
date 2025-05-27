@@ -33,7 +33,7 @@ Server:
 
 **Features**  
 1.User Registration & Login-Secure user authentication with session management.  
-2.Product Browsing by Categories-Explore products under Men, Women, Sports, and Accessories.  
+2.Product Browsing by Categories-Explore products under Men, Women, Sports and Accessories.  
 3.Search and Filter-Quickly find products using keyword search and category-based filtering.  
 4.Add to Cart & Checkout-Seamless shopping experience with cart management and order placement.  
 5.Order Summary Page-Displays purchase confirmation and detailed order information after checkout.  
