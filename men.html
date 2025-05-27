@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign-in.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	
+	
+	<script src="/Sports_Ecommerce/Working_Copy/assets/js/search.js"></script>
+	
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+       
+        <div class="navbar">
+          <div class="logo">
+            <a href="index.html">
+              <img src="./assets/images/logo.png" alt="Logo" width="125px" />
+            </a>
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <!-- Search Box -->
+              <li class="search-box">
+                <input type="text" id="searchBox" placeholder="Search for products..." autocomplete="off">
+				<div id="searchResults" class="search-results"></div>
+              </li>
+              <!-- Menu Links -->
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="women.html">Women</a>
+                <ul class="dropdown-menu">
+                    <li><a href="women-shoes.html">Shoes</a></li>
+                    <li><a href="women.html">Clothing</a></li>
+                </ul>
+            </li>
+              <!--<li><a href="men.html">Men</a></li>-->
+              <li class="dropdown">
+                <a href="men.html">Men</a>
+                <ul class="dropdown-menu">
+                    <li><a href="men.html">Shoes</a></li>
+                    <li><a href="men-clothing.html">Clothing</a></li>
+                </ul>
+            </li>
+              <li><a href="sports.html">Sports</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <!-- Dropdown Menu -->
+                <div class="dropdown">
+                  <a href="#" class="dropdown-button">Sign In</a>
+                  <ul class="dropdown-content">
+                      <li><a href="home.html">My Account</a></li>
+                      
+                      <li><a href="account.html" class="login-link">LOGIN</a></li>
+                      <li><a href="account.html" class="join-us-link">REGISTER</a></li>
+                  </ul>
+            	</div>
+          </nav>
+          <a href="cart.html">
+            <img src="./assets/images/cart.png" alt="Cart" width="30px" height="30px" />
+          </a>
+          <img 
+            src="./assets/images/menu.png"
+            alt="Menu Icon"
+            class="menu-icon"
+            onclick="menutoggle()" 
+          />
+        </div>
+  </header>
+  
+  <main>
+    <section id="shoe-collection">
+      <div class="shoe-item">
+        <a href="pro-details.html"><img src="images/shoe1.jpg" alt="UltraRide ProFoam Men's Running Shoes"></a> 
+        <h3>UltraRide ProFoam Men's Running Shoes</h3>
+        <p>₹4,319</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 1, 
+          name: 'UltraRide ProFoam Mens Running Shoes', 
+          price: 4319, 
+          img: 'images/shoe1.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details2.html"><img src="images/shoe2.avif" alt="Adidas Ultraboost"></a>
+        <h3>Skyrocket Lite Unisex Running Shoes</h3>
+        <p>₹2,999</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 2, 
+          name: 'Skyrocket Lite Unisex Running Shoes', 
+          price: 2999, 
+          img: 'images/shoe2.avif'
+        })">Add to Cart</button>
+      </div>           
+      <div class="shoe-item">
+        <a href="pro-details3.html"><img src="images/shoe3.avif" alt="skyrocket Lite Unisex Running Shoes"></a>
+        <h3>Skyrocket Lite Unisex Running Shoes</h3>
+        <p>₹550</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 3, 
+          name: 'Skyrocket Lite Unisex Running Shoes', 
+          price: 550, 
+          img: 'images/shoe3.avif'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details4.html"><img src="images/shoe4.jpg" alt="Skyrocket Lite Unisex Running Shoes"></a>
+        <h3>Skyrocket Lite Unisex Running Shoes</h3>
+        <p>₹234</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 4, 
+          name: 'Skyrocket Lite Unisex Running Shoes', 
+          price: 234, 
+          img: 'images/shoe4.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details5.html"><img src="images/shoe5.jpg" alt="Skyrocket Lite Unisex Running Shoes"></a>
+        <h3>Skyrocket Lite Unisex Running Shoes</h3>
+        <p>₹2,399</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 5, 
+          name: 'Skyrocket Lite Unisex Running Shoes', 
+          price: 2399, 
+          img: 'images/shoe5.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details6.html"><img src="images/shoe8.jpg" alt="UltraRide ProFoam Men's Running Shoes"></a>
+        <h3>Deviate NITRO™ 3 Marathon Men's Running Shoes</h3>
+        <p>₹1,599</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 6, 
+          name: 'Deviate NITRO™ 3 Marathon Series Mens Running Shoes', 
+          price: 1599, 
+          img: 'images/shoe8.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details7.html"><img src="images/shoe7.jpg" alt="Deviate NITRO™ 2 Men's Running Shoes"></a>
+        <h3>Deviate NITRO™ 2 Men's Running Shoes</h3>
+        <p>₹1000</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 7, 
+          name: 'Deviate NITRO™ 2 Mens Running Shoes', 
+          price: 1000, 
+          img: 'images/shoe7.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details8.html"><img src="images/shoe66.jpg" alt="Deviate NITRO™ 2 Running Shoes"></a>
+        <h3>Deviate NITRO™ 2 Running Shoes</h3>
+        <p>₹1,599</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 8, 
+          name: 'Deviate NITRO™ 2 Running Shoes', 
+          price: 1599, 
+          img: 'images/shoe66.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details9.html"><img src="images/shoe9.jpg" alt="Deviate NITRO™ 2 Unisex Running Shoes"></a>
+        <h3>Deviate NITRO™ 2 Unisex Running Shoes</h3>
+        <p>₹1,199</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 9, 
+          name: 'Deviate NITRO™ 2 Unisex Running Shoes', 
+          price: 1199, 
+          img: 'images/shoe9.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details10.html"><img src="images/shoe10.jpg" alt="Deviate NITRO™ 2 Men's Running Shoes"></a>
+        <h3>Deviate NITRO™ 2 Men's Running Shoes</h3>
+        <p>₹1,199</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 10, 
+          name: 'Deviate NITRO™ 2 Mens Running Shoes', 
+          price: 1199, 
+          img: 'images/shoe10.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details11.html"><img src="images/shoe11.jpg" alt="Darter Pro Fade Unisex Running Shoes"></a>
+        <h3>Darter Pro Fade Unisex Running Shoes</h3>
+        <p>₹599</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 11, 
+          name: 'Darter Pro Fade Unisex Running Shoes', 
+          price: 599, 
+          img: 'images/shoe11.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details12.html"><img src="images/shoe12.jpg" alt="Skyrocket Lite Unisex Running Shoes"></a>
+        <h3>UltraRide ProFoam Men's Running Shoes</h3>
+        <p>₹299</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 12, 
+          name: 'UltraRide ProFoam Mens Running Shoes', 
+          price: 299, 
+          img: 'images/shoe12.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details13.html"><img src="images/shoe13.jpg" alt="Conduct Pro Unisex Running Shoes"></a>
+        <h3>Conduct Pro Unisex Running Shoes</h3>
+        <p>₹639</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 13, 
+          name: 'Conduct Pro Unisex Running Shoes', 
+          price: 639, 
+          img: 'images/shoe13.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details14.html"><img src="images/shoe14.jpg" alt="Conduct Pro Unisex Running Shoes"></a>
+        <h3>Conduct Pro Unisex Running Shoes</h3>
+        <p>₹500</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 14, 
+          name: 'Conduct Pro Unisex Running Shoes', 
+          price: 500, 
+          img: 'images/shoe14.jpg'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="pro-details15.html"><img src="images/shoe15.jpg" alt="Conduct Pro Unisex Running Shoes"></a>
+        <h3>Conduct Pro Unisex Running Shoes</h3>
+        <p>₹799</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 15, 
+          name: 'Conduct Pro Unisex Running Shoes', 
+          price: 799, 
+          img: 'images/shoe15.jpg'
+        })">Add to Cart</button>
+      </div>      
+    </section>
+  </main>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div class="row" style="display: flex; justify-content: space-between; align-items: flex-start;">
+  
+      <!-- Quick Links -->
+      <div class="footer-col" >
+        <h3>Quick Links</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+          <li ><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+          <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+          <li><a href="shoecare.html" style="color: white; text-decoration: none;">Shoe Care</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-col">
+        <h3>Categories</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="women-shoes.html">Women - Shoes</a></li>
+          <li ><a href="women-clothes.html">Women - Clothes</a></li>
+          <li ><a href="men-shoes.html">Men - Shoes</a></li>
+          <li ><a href="men-clothes.html">Men - Clothes</a></li>
+          <li ><a href="accessories.html">Accessories</a></li>
+          <li ><a href="sports.html">Sports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Trending Sports</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="sp13.html">Cricket</a></li>
+          <li ><a href="sp5.html">Football</a></li>
+          <li ><a href="sp2.html">Badminton</a></li>
+          <li ><a href="sp6.html">Tennis</a></li>
+        </ul> 
+      </div>
+
+
+      <!-- Social Media & Newsletter -->
+     <div class="footer-col">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+        </form>
+      </div>
+
+    </div>
+    <hr />
+    <p style="text-align: center;">&copy; 2025 Sports Gear - All rights reserved.</p>
+    <p style="text-align: center;">Safe Payment Options: <span>Debit Card</span> 
+  </div>
+</footer>
+
+<!-- Font Awesome Script for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- JS for Toggle menu -->
+<script src="assets/js/cart.js"></script>
+
+</body>
+</html>

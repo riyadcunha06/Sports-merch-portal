@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red store | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign-in.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <script src="/Sports_Ecommerce/Working_Copy/assets/js/search.js"></script>
+    <style>
+      .product-details {
+        background-color: #ffffff;
+        }
+
+      .product-container {
+        background-color: #ffffff;
+        }
+
+      body {
+        background-color: #ffffff;
+        }
+
+  </style>
+  </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+         
+          <div class="navbar">
+            <div class="logo">
+              <a href="index.html">
+                <img src="./assets/images/logo.png" alt="Logo" width="125px" />
+              </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                 <!-- Search Box -->
+              <li class="search-box">
+                <input type="text" id="searchBox" placeholder="Search for products..." autocomplete="off">
+				<div id="searchResults" class="search-results"></div>
+              </li>
+                  <!-- Menu Links -->
+                  <li><a href="index.html">Home</a></li>
+                  <li class="dropdown">
+                    <a href="women.html">Women</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="women-shoes.html">Shoes</a></li>
+                        <li><a href="women.html">Clothing</a></li>
+                    </ul>
+                </li>
+                  <!--<li><a href="men.html">Men</a></li>-->
+                  <li class="dropdown">
+                    <a href="men.html">Men</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="men.html">Shoes</a></li>
+                        <li><a href="men-clothing.html">Clothing</a></li>
+                    </ul>
+                </li>
+                  <li><a href="sports.html">Sports</a></li>
+                  <li><a href="accessories.html">Accessories</a></li>
+                   <!-- Dropdown Menu -->
+                <div class="dropdown">
+                  <a href="#" class="dropdown-button">Sign In</a>
+                  <ul class="dropdown-content">
+                      <li><a href="home.html">My Account</a></li>
+                      
+                      <li><a href="account.html" class="login-link">LOGIN</a></li>
+                      <li><a href="account.html" class="join-us-link">REGISTER</a></li>
+                  </ul>
+              </div>
+                
+              </nav>
+      <a href="cart.html"><img src="./assets/images/cart.png" alt="" width="30px" height="30px" /></a>
+      <img src="./assets/images/menu.png" alt="" class="menu-icon" onclick="menutoggle()" />
+    </div>
+  </div>
+
+  <!-- Single Products Detail -->
+  <div class="product-container">
+ 
+<!-- New code -->
+    <div class="product-gallery">
+      <div class="image-grid">
+          <div class="grid-item">
+              <img src="images/ac1.webp" class="product-img" alt="Smart Band 4" />
+          </div>
+          <div class="grid-item">
+              <img src="images/ac1a.jpg" class="product-img" alt="Smart Band 5" />
+          </div>
+          <div class="grid-item">
+              <img src="images/ac1b.jpg" class="product-img" alt="Smart Band 4" />
+          </div>
+          <div class="grid-item">
+              <img src="images/ac1c.webp" class="product-img" alt="Smart Band 4" />
+          </div>
+      </div>
+  </div>
+  
+
+    <!-- Right side - Product Details -->
+    <div class="product-details">
+        <h1>Smart Band 4</h1>
+        <h3 class="price">₹999</h3>
+        
+                <input type="number" value="1" />
+                <a href="" class="btn"onclick="addToCart({
+                  id: 1, 
+                  name: 'Smart Band 4', 
+                  price: 999, 
+                  img: 'images/ac1.webp'
+                })">Add to Cart</a>
+                <h3>Description<i class="fa fa-indent"></i></h3><br>
+   
+        <!-- Product description -->
+        <div class="product-description">
+          <h3>Fitness Tracker with Heart Rate Monitor & AMOLED Display</h3>
+          <ul>
+              <li>AMOLED Touch Display: The Smart Band 4 features a vibrant and responsive AMOLED touchscreen, providing clear visibility even in bright sunlight.</li>
+              <li>24/7 Heart Rate & Sleep Monitoring: Equipped with advanced sensors, it continuously tracks your heart rate and sleep patterns to help you stay on top of your fitness goals.</li>
+              <li>Water-Resistant up to 50m: Designed for everyday use, it is swim-proof and can withstand splashes, making it perfect for workouts and outdoor activities.</li>
+              <li>Long Battery Life: With up to 20 days of battery backup on a single charge, the Smart Band 4 ensures uninterrupted tracking without frequent recharging.</li>
+              <li>Multi-Sport Modes & Notifications: Track your steps, calories, and various sports activities while staying connected with call, message, and app notifications.</li>
+          </ul>
+      </div>
+      
+    </div>
+</div>
+
+    </div>
+  </div>
+  <!-- Title -->
+  <div class="small-container">
+    <div class="row row-2">
+      <h2>Related Products</h2>
+    </div>
+  </div>
+
+  <!-- Similar Products -->
+
+  <div class="small-container">
+    <div class="row">
+      <div class="col-4">
+        <a href="ac6.html">
+          <img src="images/ac6.avif" class="product-img" alt="Water Bottle" />
+        </a>
+        <br><br><h4>Sportstyle Unisex Training Water Bottle</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><h3>₹550</h3></p>
+      </div>
+
+      <div class="col-4">
+        <a href="ms2.html">
+          <img src="images/ms2.avif" class="product-img" alt="Men's Slim Fit Polo T-shirt" />
+        </a>
+        <h4>Men's Slim Fit Polo T-shirt</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p><h3>₹500</h3></p>
+      </div>
+
+      <div class="col-4">
+        <a href="ws1.html">
+          <img src="images/ws1.avif" class="product-img" alt="Cosco Volley" />
+        </a>
+        <br><br><h4>Genetics Unisex Basketball Shoes</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><h3>₹499</h3></p>
+      </div> 
+
+      <div class="col-4">
+        <a href="ac9.html">
+          <img src="images/ac9.avif" class="product-img" alt="Manchester City Large Towel" />
+        </a>
+        <br><br><h4>Manchester City Large Towel</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p><h3>₹200</h3></p>
+      </div>
+
+      
+    </div>
+  </div>
+
+   <!-- Footer -->
+<footer class="footer">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div class="row" style="display: flex; justify-content: space-between; align-items: flex-start;">
+  
+      <!-- Quick Links -->
+      <div class="footer-col" >
+        <h3>Quick Links</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+          <li ><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+          <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+          <li><a href="shoecare.html" style="color: white; text-decoration: none;">Shoe Care</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-col">
+        <h3>Categories</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="women-shoes.html">Women - Shoes</a></li>
+          <li ><a href="women-clothes.html">Women - Clothes</a></li>
+          <li ><a href="men-shoes.html">Men - Shoes</a></li>
+          <li ><a href="men-clothes.html">Men - Clothes</a></li>
+          <li ><a href="accessories.html">Accessories</a></li>
+          <li ><a href="sports.html">Sports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Trending Sports</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="sp13.html">Cricket</a></li>
+          <li ><a href="sp5.html">Football</a></li>
+          <li ><a href="sp2.html">Badminton</a></li>
+          <li ><a href="sp6.html">Tennis</a></li>
+        </ul> 
+      </div>
+
+
+      <!-- Social Media & Newsletter -->
+     <div class="footer-col">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+        </form>
+      </div>
+
+    </div>
+    <hr />
+    <p style="text-align: center;">&copy; 2025 Sports Gear - All rights reserved.</p>
+    <p style="text-align: center;">Safe Payment Options: <span>Debit Card</span> 
+  </div>
+</footer>
+  
+  <!-- scripts -->
+  <script src="assets/js/cart.js"></script>
+</body>
+
+</html>

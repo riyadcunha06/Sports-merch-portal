@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red store | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign-in.css" />
+    <link rel="stylesheet" href="./assets/css/address.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	<script src="/Sports_Ecommerce/Working_Copy/assets/js/search.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+       
+        <div class="navbar">
+          <div class="logo">
+            <a href="index.html">
+              <img src="./assets/images/logo.png" alt="Logo" width="125px" />
+            </a>
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <!-- Search Box -->
+              <li class="search-box">
+                <input type="text" id="searchBox" placeholder="Search for products..." autocomplete="off">
+				<div id="searchResults" class="search-results"></div>
+              </li>
+              <!-- Menu Links -->
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="women.html">Women</a>
+                <ul class="dropdown-menu">
+                    <li><a href="women-shoes.html">Shoes</a></li>
+                    <li><a href="women.html">Clothing</a></li>
+                </ul>
+            </li>
+              <!--<li><a href="men.html">Men</a></li>-->
+              <li class="dropdown">
+                <a href="men.html">Men</a>
+                <ul class="dropdown-menu">
+                    <li><a href="men.html">Shoes</a></li>
+                    <li><a href="men-clothing.html">Clothing</a></li>
+                </ul>
+            </li>
+              <li><a href="sports.html">Kids</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <!-- Dropdown Menu -->
+                <div class="dropdown">
+                  <a href="#" class="dropdown-button">Sign In</a>
+                  <ul class="dropdown-content">
+                      <li><a href="home.html">My Account</a></li>
+                      <li><a href="account.html" class="login-link">LOGIN</a></li>
+                      <li><a href="account.html" class="join-us-link">REGISTER</a></li>
+                  </ul>
+              </div>
+            
+          </nav>
+          <a href="cart.html">
+            <img src="./assets/images/cart.png" alt="Cart" width="30px" height="30px" />
+          </a>
+          <img 
+            src="./assets/images/menu.png"
+            alt="Menu Icon"
+            class="menu-icon"
+            onclick="menutoggle()" 
+          />
+        </div>
+        <div class="account-container">
+          <!-- Left Sidebar -->
+          <div class="sidebar">
+              <nav>
+                  <ul>
+                      <li class="active"><a href="home.html"><i class="fas fa-user"></i> Account Overview</a></li>
+                      <!--  <li><a href="my-orders.html"><i class="fas fa-box"></i> My Orders</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i> Wishlist</a></li>-->
+                      <li><a href="address.html"><i class="fas fa-address-book"></i> Addresses</a></li>
+                      <li><a href="settings.html"><i class="fas fa-cog"></i> Account Settings</a></li>
+                  </ul>
+              </nav>
+              <div class="help-section">
+                  <h3>Need Help?</h3>
+                  <a href="#" class="logout-btn">LOGOUT</a>
+              </div>
+          </div>
+          
+          
+              <div class="address-list">
+                  <h2>Addresses</h2>
+                  <br>
+                  <div id="address-container">
+                      <p id="no-address-msg">You have no addresses yet</p>
+                  </div>
+                  <br>
+                  <button class="add-address-button" onclick="openAddressForm()">Add Address</button>
+              </div>
+          
+              <!-- Address Form Modal (Keep this outside repeated elements) -->
+              <div id="addressFormModal" class="modal" style="display: none;">
+                  <div class="modal-content">
+                      <span class="close-button" onclick="closeAddressForm()">&times;</span>
+                      <h2>Add / Edit Address</h2>
+                      <form id="address-form" onsubmit="saveAddress(event)">
+                          
+                       	 <input type="hidden" id="addressId" name="addressId" />
+                          <label for="firstName">First Name</label>
+                          <input type="text" id="firstName" name="firstName" required />
+          
+                          <label for="lastName">Last Name</label>
+                          <input type="text" id="lastName" name="lastName" required />
+                         
+                          <label for="line1">Address Line 1</label>
+                          <input type="text" id="line1" name="line1" required />
+          
+          				 <label for="city">City</label>
+                          <input type="text" id="city" name="city" required />
+                          
+                           
+                          <label for="country">Country</label>
+                          <select id="country" name="country" required>
+                              <option value="">Select Country</option>
+                              <option value="India">India</option>
+                          </select>
+          
+                          <label for="pinCode">PIN Code</label>
+                          <input type="text" id="pinCode" name="pinCode" required />
+          
+                          <label for="phone">Phone Number </label>
+                          <input type="tel" id="phone" name="phone" />
+          
+                          <button type="submit">Save Address</button>
+                      </form>
+                  </div>
+              </div>
+          
+              <!-- JavaScript Link -->
+              <script src="assets/js/address.js" defer></script>
+             
+              <script>
+              
+              document.addEventListener("DOMContentLoaded", fetchAddress);
+              
+              function fetchAddress() {
+            	    fetch('/Sports_Ecommerce/addressServlet?action=fetch')
+            	      .then(response => response.json())
+            	      .then(data => {
+            	        const container = document.getElementById('address-container');
+            	        const noAddressMsg = document.getElementById('no-address-msg');
+
+            	        container.innerHTML = '';
+
+            	        if (data.length === 0) {
+            	          noAddressMsg.style.display = 'block';
+            	        } else {
+            	          noAddressMsg.style.display = 'none';
+
+            	          data.forEach(address => {
+            	            container.innerHTML += `
+            	              <div class="address-card">
+            	                <p><strong>${address.firstName} ${address.lastName}</strong></p>
+            	                <p>${address.line1}, ${address.city}, ${address.country} - ${address.pinCode}</p>
+            	                <p>Phone: ${address.phone}</p>
+            	                <button onclick="editAddress(${address.id})">Edit</button>
+            	                <button onclick="deleteAddress(${address.id})">Delete</button>
+            	              </div>
+            	              <hr/>
+            	            `;
+            	          });
+            	        }
+            	      });
+              }
+             
+              function saveAddress(event) {
+            	    event.preventDefault();
+
+            	    const formData = new FormData(document.getElementById('address-form'));
+
+            	    fetch('/Sports_Ecommerce/addressServlet', {
+            	        method: 'POST',
+            	        body: new URLSearchParams(formData), // Convert FormData to URL encoded format
+            	        headers: {
+            	            'Content-Type': 'application/x-www-form-urlencoded'
+            	        }
+            	    })
+            	    .then(response => {
+            	        if (response.ok) {
+            	            alert('Address saved successfully');
+            	            closeAddressForm(); // Close modal after successful submission
+            	        } else {
+            	            alert('Error saving address');
+            	        }
+            	    })
+            	    .catch(error => {
+            	        console.error('Error:', error);
+            	    });
+            	}
+
+              function editAddress(addressId) {
+            	    console.log('Edit Address:', addressId);
+            	    // Open the modal and pre-fill data (we will handle this next)
+            	  }
+              
+              function deleteAddress(addressId) {
+            	    fetch(`/Sports_Ecommerce/AddressServlet?action=delete&addressId=${addressId}`, {
+            	      method: 'POST'
+            	    }).then(() => {
+            	      fetchAddress(); // Reload addresses after deletion
+            	    });
+            	  }
+            	
+				</script>
+          
+          </body>
+          </html>
+          
+        

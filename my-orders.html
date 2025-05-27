@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red store | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign-in.css" />
+    <link rel="stylesheet" href="./assets/css/my-orders.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+       
+        <div class="navbar">
+          <div class="logo">
+            <a href="index.html">
+              <img src="./assets/images/logo.png" alt="Logo" width="125px" />
+            </a>
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <!-- Search Box -->
+              <li class="search-box">
+                <input type="text" placeholder="Search for products..." />
+              </li>
+              <!-- Menu Links -->
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="women.html">Women</a>
+                <ul class="dropdown-menu">
+                    <li><a href="women-shoes.html">Shoes</a></li>
+                    <li><a href="women.html">Clothing</a></li>
+                </ul>
+            </li>
+              <!--<li><a href="men.html">Men</a></li>-->
+              <li class="dropdown">
+                <a href="men.html">Men</a>
+                <ul class="dropdown-menu">
+                    <li><a href="men.html">Shoes</a></li>
+                    <li><a href="men-clothing.html">Clothing</a></li>
+                </ul>
+            </li>
+              <li><a href="kids.html">Kids</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <!-- Dropdown Menu -->
+              <div class="dropdown">
+                <a href="#" class="dropdown-button">Sign In</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">My Account</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Check Order</a></li>
+                    <li><a href="#">Store Finder</a></li>
+                    <li><div class="separator"></div></li>
+                    <li><a href="#">Language EN 🇮🇳</span></a></li>
+                    <li><div class="separator"></div></li>
+                    <li><a href="account.html" class="login-link">LOGIN</a></li>
+                    <li><a href="#" class="join-us-link">JOIN US</a></li>
+                </ul>
+            </div>
+            
+          </nav>
+          <a href="cart.html">
+            <img src="./assets/images/cart.png" alt="Cart" width="30px" height="30px" />
+          </a>
+          <img 
+            src="./assets/images/menu.png"
+            alt="Menu Icon"
+            class="menu-icon"
+            onclick="menutoggle()" 
+          />
+        </div>
+        <div class="account-container">
+          <!-- Left Sidebar -->
+          <div class="sidebar">
+              <nav>
+                  <ul>
+                      <li class="active"><a href="home.html"><i class="fas fa-user"></i> Account Overview</a></li>
+                      <li><a href="my-orders.html"><i class="fas fa-box"></i> My Orders</a></li>
+                      <li><a href="#"><i class="fas fa-heart"></i> Wishlist</a></li>
+                      <li><a href="address.html"><i class="fas fa-address-book"></i> Addresses</a></li>
+                      <li><a href="settings.html"><i class="fas fa-cog"></i> Account Settings</a></li>
+                  </ul>
+              </nav>
+              <div class="help-section">
+                  <h3>Need Help?</h3>
+                  <a href="#" class="logout-btn">LOGOUT</a>
+              </div>
+          </div>
+        <div class="order-history-container">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> &nbsp; • &nbsp;
+                <a href="account.html">My Account</a> &nbsp; • &nbsp;
+                <span>Order History</span>
+            </nav>
+        
+            <!-- Order History Section -->
+            <div class="order-history-content">
+                <h1>Order History</h1>
+                <h2>My Account</h2>
+        
+                <!-- Date Selection Dropdown -->
+                <div class="date-selection">
+                    <label for="date-range">Select Date</label>
+                    <select id="date-range" name="date-range">
+                        <option value="last-6-months">Last six months</option>
+                        <option value="last-year">Last year</option>
+                        <option value="all-time">2025</option>
+                        <option value="all-time">2024</option>
+                        <option value="all-time">2023</option>
+                        <option value="all-time">2022</option>
+                        <option value="all-time">2021</option>
+                        <option value="all-time">2020</option>
+                        <option value="all-time">2019</option>
+                        <option value="all-time">2018</option>
+                        <option value="all-time">2017</option>
+                    </select>
+                </div>
+        
+                <!-- No Orders Message -->
+                <p class="no-orders-message">No orders found for that time period</p>
+        
+                <!-- Return to Account Button -->
+                <div class="return-btn-container">
+                    <a href="account.html" class="return-btn">Return to My Account</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>        

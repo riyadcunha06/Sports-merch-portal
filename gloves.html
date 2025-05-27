@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red store | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign-in.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <style>
+      .product-details {
+        background-color: #ffffff;
+        }
+
+      .product-container {
+        background-color: #ffffff;
+        }
+
+      body {
+        background-color: #ffffff;
+        }
+
+  </style>
+  </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+         
+          <div class="navbar">
+            <div class="logo">
+              <a href="index.html">
+                <img src="./assets/images/logo.png" alt="Logo" width="125px" />
+              </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                  <!-- Search Box -->
+                  <li class="search-box">
+                    <input type="text" placeholder="Search for products..." />
+                  </li>
+                  <!-- Menu Links -->
+                  <li><a href="index.html">Home</a></li>
+                  <li class="dropdown">
+                    <a href="women.html">Women</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="women-shoes.html">Shoes</a></li>
+                        <li><a href="women.html">Clothing</a></li>
+                    </ul>
+                </li>
+                  <!--<li><a href="men.html">Men</a></li>-->
+                  <li class="dropdown">
+                    <a href="men.html">Men</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="men.html">Shoes</a></li>
+                        <li><a href="men-clothing.html">Clothing</a></li>
+                    </ul>
+                </li>
+                  <li><a href="sports.html">Sports</a></li>
+                  <li><a href="accessories.html">Accessories</a></li>
+                  <!-- Dropdown Menu -->
+                  <div class="dropdown">
+                    <a href="#" class="dropdown-button">Sign In</a>
+                    <ul class="dropdown-content">
+                        <li><a href="home.html">My Account</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Check Order</a></li>
+                        <li><a href="#">Store Finder</a></li>
+                        <li><div class="separator"></div></li>
+                        <li><a href="#">Language EN 🇮🇳</span></a></li>
+                        <li><div class="separator"></div></li>
+                        <li><a href="account.html" class="login-link">LOGIN</a></li>
+                        <li><a href="#" class="join-us-link">JOIN US</a></li>
+                    </ul>
+                </div>
+                
+              </nav>
+      <a href="cart.html"><img src="./assets/images/cart.png" alt="" width="30px" height="30px" /></a>
+      <img src="./assets/images/menu.png" alt="" class="menu-icon" onclick="menutoggle()" />
+    </div>
+  </div>
+
+  <!-- Single Products Detail -->
+  <div class="product-container">
+ 
+<!-- New code -->
+    <div class="product-gallery">
+      <div class="image-grid">
+          <div class="grid-item">
+              <img src="images/g1.jpg" class="product-img" alt="PUMA Future Wicket Keeping Gloves" />
+          </div>
+          <div class="grid-item">
+              <img src="images/g2.jpg" class="product-img" alt="PUMA Future Wicket Keeping Gloves" />
+          </div>
+          <div class="grid-item">
+              <img src="images/g3.jpg" class="product-img" alt="PUMA Future Wicket Keeping Gloves" />
+          </div>
+          <div class="grid-item">
+              <img src="images/g4.jpg" class="product-img" alt="PUMA Future Wicket Keeping Gloves" />
+          </div>
+      </div>
+  </div>
+  
+
+    <!-- Right side - Product Details -->
+    <div class="product-details">
+        <h1>PUMA Future Wicket Keeping Gloves</h1>
+        <h3 class="price">₹400</h3>
+        
+                <input type="number" value="1" />
+                <a href="" class="btn"onclick="addToCart({
+                  id: 16, 
+                  name: 'PUMA Future Wicket Keeping Gloves', 
+                  price: 400, 
+                  img: 'images/g1.jpg'
+                })">Add to Cart</a>
+                <h3>Description<i class="fa fa-indent"></i></h3><br>
+   
+        <!-- Product description -->
+        <div class="product-description">
+            <br><h3>Premium cricket gloves designed for comfort, grip, and protection during intense matches.</h3><br>
+            <h3>Benefits</h3>
+            <ul>
+                <li>SUPERIOR PROTECTION: High-density foam padding absorbs impact and reduces shock.</li>
+                <li>ENHANCED GRIP: Textured palm ensures a firm grip for better shot control.</li>
+                <li>BREATHABLE DESIGN: Mesh panels allow airflow to keep hands cool and dry.</li>
+                <li>DURABLE MATERIAL: Made from premium leather and high-quality synthetic materials for longevity.</li>
+                <li>ERGONOMIC FIT: Snug and flexible fit for unrestricted hand movement.</li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+    </div>
+  </div>
+  <!-- Title -->
+  <div class="small-container">
+    <div class="row row-2">
+      <h2>Related Products</h2>
+      <p>View More</p>
+    </div>
+  </div>
+
+  <!-- Similar Products -->
+
+  <div class="small-container">
+    <div class="row">
+      <div class="col-4">
+        <a href="sp11.html">
+          <img src="images/sp11.jpg" class="product-img" alt="Chess Board Classic PCB-003" />
+        </a>
+        <br><br><br><br><br><br><br><h4>Chess Board Classic PCB-003</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p><h3>₹200</h3></p>
+      </div>
+
+      <div class="col-4">
+        <a href="sp10.html">
+          <img src="images/sp10.jpg" class="product-img" alt="ALFA AX-9 HOCKEY STICK" />
+        </a>
+        <br><br><h4>ALFA AX-9 HOCKEY STICK</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p><h3>₹999</h3></p>
+      </div>
+
+      <div class="col-4">
+        <a href="sp9.html">
+          <img src="images/sp9.jpg" class="product-img" alt="Cosco Volley" />
+        </a>
+        <br><br><h4>Sprint Fibre-Glass Arrow</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p><h3>₹1500</h3></p>
+      </div>  
+
+      <div class="col-4">
+        <a href="sp12.html">
+          <img src="images/sp12.webp" class="product-img" alt="AIRAVAT INLINE SKATES DASH" />
+        </a>
+        <br><br><h4>AIRAVAT INLINE SKATES DASH</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><h3>₹400</h3></p>
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+          <h3>Support</h3>
+          <ul>
+            <li>Contact us</li>
+            <li>Track Order</li>
+            <li>Shoe Care</li>
+            <li>Promotions & Sale</li>
+            <li>Initiate Return / Exchange</li>
+            <li>Cookies Settings</li>
+          </ul>
+        </div>
+
+        <div class="footer-col-1">
+          <h3>About Us</h3>
+          <ul>
+            <li>Who we are</li>
+            <li>Comapany</li>
+            <li>Made in India</li>
+            <li>Investors</li>
+            <li>Coporate News</li>
+            <li>Careers</li>
+          </ul>
+        </div>
+
+            <div class="footer-col-3">
+              <h3>Stay up to date</h3>
+              <div class="social-icons">
+                  <a href="https://www.youtube.com" target="_blank">
+                      <i class="fab fa-youtube"></i>
+                  </a>
+                  <a href="https://www.instagram.com" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.facebook.com" target="_blank">
+                      <i class="fab fa-facebook"></i>
+                  </a>
+                  <a href="https://www.whatsapp.com" target="_blank">
+                      <i class="fab fa-whatsapp"></i>
+                  </a>
+              </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <p style="text-align: center;">&copy; 2024 Sports Gear - All rights reserved.</p>
+      <div class="payment-options">
+        <p style="text-align: center;">Safe Payment Options: <span> Debit Card</span> | <span>Credit Card</span> | <span>Net Banking</span> | <span>UPI</span></p>
+    </div>
+    </div>
+  </div>
+  
+  <!-- scripts -->
+  <script src="assets/js/cart.js"></script>
+</body>
+
+</html>

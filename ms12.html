@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Red store | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign-in.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <script src="/Sports_Ecommerce/Working_Copy/assets/js/search.js"></script>
+    <style>
+      .product-details {
+        background-color: #ffffff;
+        }
+
+      .product-container {
+        background-color: #ffffff;
+        }
+
+      body {
+        background-color: #ffffff;
+        }
+
+  </style>
+  </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+         
+          <div class="navbar">
+            <div class="logo">
+              <a href="index.html">
+                <img src="./assets/images/logo.png" alt="Logo" width="125px" />
+              </a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                  <!-- Search Box -->
+              <li class="search-box">
+                <input type="text" id="searchBox" placeholder="Search for products..." autocomplete="off">
+				<div id="searchResults" class="search-results"></div>
+              </li>
+                  <!-- Menu Links -->
+                  <li><a href="index.html">Home</a></li>
+                  <li class="dropdown">
+                    <a href="women.html">Women</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="women-shoes.html">Shoes</a></li>
+                        <li><a href="women.html">Clothing</a></li>
+                    </ul>
+                </li>
+                  <!--<li><a href="men.html">Men</a></li>-->
+                  <li class="dropdown">
+                    <a href="men.html">Men</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="men.html">Shoes</a></li>
+                        <li><a href="men-clothing.html">Clothing</a></li>
+                    </ul>
+                </li>
+                  <li><a href="sports.html">Sports</a></li>
+                  <li><a href="accessories.html">Accessories</a></li>
+                   <!-- Dropdown Menu -->
+                <div class="dropdown">
+                  <a href="#" class="dropdown-button">Sign In</a>
+                  <ul class="dropdown-content">
+                      <li><a href="home.html">My Account</a></li>
+                      
+                      <li><a href="account.html" class="login-link">LOGIN</a></li>
+                      <li><a href="account.html" class="join-us-link">REGISTER</a></li>
+                  </ul>
+              </div>
+                
+              </nav>
+      <a href="cart.html"><img src="./assets/images/cart.png" alt="" width="30px" height="30px" /></a>
+      <img src="./assets/images/menu.png" alt="" class="menu-icon" onclick="menutoggle()" />
+    </div>
+  </div>
+
+  <!-- Single Products Detail -->
+  <div class="product-container">
+    <!-- Left side - Product Images -->
+    <!-- <div class="product-gallery">
+        <div class="main-image">
+            <img src="images/shoe1.jpg" id="ProductImg" alt="UltraRide ProFoam Men's Running Shoes" />
+        </div>
+        <div class="thumbnail-grid">
+            <div class="thumbnail-row">
+                <img src="images/shoe1.jpg" class="thumbnail" />
+                <img src="images/shoe1a.avif" class="thumbnail" />
+            </div>
+            <div class="thumbnail-row">
+                <img src="images/shoe1b.avif" class="thumbnail" />
+                <img src="images/shoe1cc.avif" class="thumbnail" />
+            </div>
+        </div>
+    </div> -->
+<!-- New code -->
+    <div class="product-gallery">
+      <div class="image-grid">
+          <div class="grid-item">
+              <img src="images/ms12.avif" class="product-img" alt="Race Lifestyle Men's Motorsport Tee" />
+          </div>
+          <div class="grid-item">
+              <img src="images/ms12a.avif" class="product-img" alt="Race Lifestyle Men's Motorsport Tee" />
+          </div>
+          <div class="grid-item">
+              <img src="images/ms12b.avif" class="product-img" alt="Race Lifestyle Men's Motorsport Tee" />
+          </div>
+          <div class="grid-item">
+              <img src="images/ms12c.avif" class="product-img" alt="Race Lifestyle Men's Motorsport Teet" />
+          </div>
+      </div>
+  </div>
+  
+
+    <!-- Right side - Product Details -->
+    <div class="product-details">
+        <h1>Scuderia Ferrari Race Lifestyle Men's Motorsport Tee</h1>
+        <h3 class="price">₹550</h3>
+        <!-- Size selector -->
+        <div class="size-selector">
+            <h3>SELECT SIZE</h3><br>
+            <div class="size-options">
+                <!-- Your size options here -->
+                <select name="" id="">
+                    <option value="">Select Size</option>
+                    <option value="">XS</option>
+                    <option value="">S</option>
+                    <option value="">M</option>
+                    <option value="">L</option>
+                    <option value="">XL</option>
+                    <option value="">XXL</option>
+                    <option value="">XXXL</option>
+                  </select><br>
+                <input type="number" value="1" />
+                <a href="" class="btn"onclick="addToCart({
+                    id: 12, 
+                    name: 'Race Lifestyle Mens Motorsport Tee', 
+                    price: 550, 
+                    img: 'images/ms12.avif'
+                  })">Add to Cart</a>
+                <h3>Description<i class="fa fa-indent"></i></h3><br>
+            </div>
+        </div>
+        <!-- Product description -->
+        <div class="product-description">
+            <h4>Time to bring the Scuderia Ferrari and their fans together. This collection focuses on tradition and innovation by combining</h4><br>
+            <ul>
+                <li>Relaxed fit</li>
+                <li>Main material: Single jersey</li>
+                <li>Regular length</li>
+                <li>Crew neck</li>
+                <li>Short sleeves</li>
+          </ul>
+        </div>
+    </div>
+</div>
+
+
+      <!-- <div class="col-2">
+        <p>Home / T-shirt</p>
+        <h2>UltraRide ProFoam Men's Running Shoes</h2>
+        <h4><b>₹4,319</b></h4>
+        <select name="" id="">
+          <option value="">Select Size</option>
+          <option value="">5.5</option>
+          <option value="">6</option>
+          <option value="">6.5</option>
+          <option value="">7</option>
+          <option value="">7.5</option>
+          <option value="">8</option>
+          <option value="">8.5</option>
+        </select>
+        <input type="number" value="1" />
+        <a href="" class="btn">Add to Cart</a>
+        <h3>Description<i class="fa fa-indent"></i></h3>
+        <br />
+        <p>Light, airy and full of style, the UltraRide Running Shoes are a hit both on and off the track.Featuring a ProFoam midsole for a responsive ride and a PROPLATE plate for quick turnover, these shoes are poised to become your all-time faves.</p>
+            <ul>
+                <li>Heel type: Flat</li>
+                <li>Shoe width: Regular fit</li>
+                <li>Shoe pronation: Neutral</li>
+                <li>Heel-to-toe-drop: 10 m</li>
+                <li>Built for a running distance of upto 500 km</li>
+            </ul>
+        
+      </div> -->
+    </div>
+  </div>
+  <!-- Title -->
+  <div class="small-container">
+    <div class="row row-2">
+      <h2>Related Products</h2>
+    </div>
+  </div>
+
+  <!-- Similar Products -->
+
+  <div class="small-container">
+    <div class="row">
+        <div class="col-4">
+            <a href="ms10.html">
+              <img src="images/ms10.avif" class="product-img" alt="RCB 2024 Mens Replica Jersey" />
+            </a>
+           <br><br<h4>RCB 2024 Mens Replica Jersey</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p><h3>₹600</h3></p>
+          </div>  
+
+      <div class="col-4">
+        <a href="ms4.html">
+          <img src="images/ms4.avif" class="product-img" alt="Designed for Training Workout Tee" />
+        </a>
+        <h4>Designed for Training Workout Tee</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p><h3>₹1199</h3></p>
+      </div>
+      
+      <div class="col-4">
+        <a href="ms2.html">
+          <img src="images/ms2.avif" class="product-img" alt="Men's Slim Fit Polo T-shirt" />
+        </a>
+        <h4>Men's Slim Fit Polo T-shirt</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-half-o"></i>
+        </div>
+        <p><h3>₹500</h3></p>
+      </div>
+
+      <div class="col-4">
+        <a href="ms11.html">
+          <img src="images/ms11.avif" class="product-img" alt="Manchester City 24/25 Mens Authentic Home Jersey" />
+        </a>
+        <h4>Manchester City Mens Authentic Home Jersey</h4>
+        <div class="rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star-o"></i>
+        </div>
+        <p><h3>₹450</h3></p>
+      </div>
+    </div>
+  </div>
+
+
+   <!-- Footer -->
+	<footer class="footer">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div class="row" style="display: flex; justify-content: space-between; align-items: flex-start;">
+  
+      <!-- Quick Links -->
+      <div class="footer-col" >
+        <h3>Quick Links</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+          <li ><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+          <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+          <li><a href="shoecare.html" style="color: white; text-decoration: none;">Shoe Care</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-col">
+        <h3>Categories</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="women-shoes.html">Women - Shoes</a></li>
+          <li ><a href="women-clothes.html">Women - Clothes</a></li>
+          <li ><a href="men-shoes.html">Men - Shoes</a></li>
+          <li ><a href="men-clothes.html">Men - Clothes</a></li>
+          <li ><a href="accessories.html">Accessories</a></li>
+          <li ><a href="sports.html">Sports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Trending Sports</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="sp13.html">Cricket</a></li>
+          <li ><a href="sp5.html">Football</a></li>
+          <li ><a href="sp2.html">Badminton</a></li>
+          <li ><a href="sp6.html">Tennis</a></li>
+        </ul> 
+      </div>
+
+
+      <!-- Social Media & Newsletter -->
+     <div class="footer-col">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+        </form>
+      </div>
+
+    </div>
+    <hr />
+    <p style="text-align: center;">&copy; 2025 Sports Gear - All rights reserved.</p>
+    <p style="text-align: center;">Safe Payment Options: <span>Debit Card</span> 
+  </div>
+</footer>
+  
+  <!-- scripts -->
+  <script src="assets/js/cart.js"></script>
+</body>
+
+</html>

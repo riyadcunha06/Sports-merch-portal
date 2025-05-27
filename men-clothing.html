@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign-in.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	<script src="/Sports_Ecommerce/Working_Copy/assets/js/search.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+       
+        <div class="navbar">
+          <div class="logo">
+            <a href="index.html">
+              <img src="./assets/images/logo.png" alt="Logo" width="125px" />
+            </a>
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <!-- Search Box -->
+              <li class="search-box">
+                <input type="text" id="searchBox" placeholder="Search for products..." autocomplete="off">
+				<div id="searchResults" class="search-results"></div>
+              </li>
+              <!-- Menu Links -->
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="women.html">Women</a>
+                <ul class="dropdown-menu">
+                    <li><a href="women-shoes.html">Shoes</a></li>
+                    <li><a href="women.html">Clothing</a></li>
+                </ul>
+            </li>
+              <!--<li><a href="men.html">Men</a></li>-->
+              <li class="dropdown">
+                <a href="men.html">Men</a>
+                <ul class="dropdown-menu">
+                    <li><a href="men.html">Shoes</a></li>
+                    <li><a href="men-clothing.html">Clothing</a></li>
+                </ul>
+            </li>
+              <li><a href="sports.html">Sports</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <!-- Dropdown Menu -->
+                <div class="dropdown">
+                  <a href="#" class="dropdown-button">Sign In</a>
+                  <ul class="dropdown-content">
+                      <li><a href="home.html">My Account</a></li>
+                      
+                      <li><a href="account.html" class="login-link">LOGIN</a></li>
+                      <li><a href="account.html" class="join-us-link">REGISTER</a></li>
+                  </ul>
+            	</div>
+          </nav>
+          <a href="cart.html">
+            <img src="./assets/images/cart.png" alt="Cart" width="30px" height="30px" />
+          </a>
+          <img 
+            src="./assets/images/menu.png"
+            alt="Menu Icon"
+            class="menu-icon"
+            onclick="menutoggle()" 
+          />
+        </div>
+  </header>
+  
+  <main>
+    <section id="shoe-collection">
+      <div class="shoe-item">
+        <a href="ms1.html"><img src="images/ms1.avif" alt="Scuderia Ferrari Race Men's Long Sleeve Relaxed Fit Motorsport Polo"></a> 
+      <h3>Scuderia Ferrari Race Mens Long Sleeve</h3>
+      <p>₹1000</p>
+      <button class="addtocart-btn" onclick="addToCart({
+        id: 1, 
+        name: 'Scuderia Ferrari Race Mens Long Sleeve Relaxed Fit Motorsport Polo', 
+        price: 1000, 
+        img: 'images/ms1.avif'
+      })">Add to Cart</button>
+    </div>
+    <div class="shoe-item">
+      <a href="ms5.html"><img src="images/ms5.avif" alt="PLAIN BASIC TEE"></a>
+      <h3>PLAIN BASIC TEE</h3>
+      <p>₹999</p>
+      <button class="addtocart-btn" onclick="addToCart({
+        id: 5, 
+        name: 'PLAIN BASIC TEE', 
+        price: 999, 
+        img: 'images/ms5.avif'
+      })">Add to Cart</button>
+    </div>
+    <div class="shoe-item">
+      <a href="ms12.html"><img src="images/ms12.avif" alt="Race Lifestyle Men's Motorsport Tee"></a>
+      <h3>Race Lifestyle Men's Motorsport Tee</h3>
+      <p>₹550</p>
+      <button class="addtocart-btn" onclick="addToCart({
+        id: 12, 
+        name: 'Race Lifestyle Mens Motorsport Tee', 
+        price: 550, 
+        img: 'images/ms12.avif'
+      })">Add to Cart</button>
+    </div>
+            
+      
+      <div class="shoe-item">
+        <a href="ms4.html"><img src="images/ms4.avif" alt="Designed for Training Workout Tee"></a>
+        <h3>Designed for Training Workout Tee</h3>
+        <p>₹1,199</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 4, 
+          name: 'Designed for Training Workout Tee', 
+          price: 1199, 
+          img: 'images/ms4.avif'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="ms3.html"><img src="images/ms3.avif" alt="Dress Code Men's Football-Inspired Jerseys"></a>
+        <h3>Dress Code Men's Football-Inspired Jersey</h3>
+        <p>₹599</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 3, 
+          name: 'Dress Code Mens Football-Inspired Jerseys', 
+          price: 599, 
+          img: 'images/ms3.avif'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="ms6.html"><img src="images/ms6.avif" alt="UltraRide ProFoam Men's Running Shoes"></a>
+        <h3>Designed for Training Tee</h3>
+        <p>₹899</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 6, 
+          name: 'Designed for Training Tee', 
+          price: 999, 
+          img: 'images/ms6.avif'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="ms7.html"><img src="images/ms7.avif" alt="AC MILAN x OFF-WHITE™ Authentic Men's Jersey"></a>
+        <h3>AC MILAN x OFF-WHITE™ Authentic Men's Jersey</h3>
+        <p>₹1,500</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 7, 
+          name: 'AC MILAN x OFF-WHITE™ Authentic Mens Jersey', 
+          price: 1500, 
+          img: 'images/ms7.avif'
+        })">Add to Cart</button>
+      </div>
+      
+      <div class="shoe-item">
+        <a href="ms10.html"><img src="images/ms10.avif" alt="RCB 2024 Men's Replica Jersey"></a>
+        <h3>RCB 2024 Men's Replica Jersey</h3>
+        <p>₹600</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 10, 
+          name: 'RCB 2024 Mens Replica Jersey', 
+          price: 600, 
+          img: 'images/ms10.avif'
+        })">Add to Cart</button>
+      </div>
+
+      <div class="shoe-item">
+        <a href="ms11.html"><img src="images/ms11.avif" alt="Manchester City 24/25 Men's Authentic Home Jersey"></a>
+        <h3>Manchester City 24/25 Men's Authentic Home Jersey</h3>
+        <p>₹450</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 11, 
+          name: 'Manchester City 24/25 Mens Authentic Home Jersey', 
+          price: 450, 
+          img: 'images/ms11.avif'
+        })">Add to Cart</button>
+      </div>
+
+      <div class="shoe-item">
+        <a href="ms8.html"><img src="images/ms8.avif" alt="PALAIS ARTISAN Men's Relaxed Fit Shirt"></a>
+        <h3>PALAIS ARTISAN Men's Relaxed Fit Shirt</h3>
+        <p>₹2000</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 8, 
+          name: 'PALAIS ARTISAN Mens Relaxed Fit Shirt', 
+          price: 2000, 
+          img: 'images/ms8.avif'
+        })">Add to Cart</button>
+      </div>
+
+      <div class="shoe-item">
+        <a href="ms9.html"><img src="images/ms9.avif" alt="TEENAGE MUTANT NINJA TURTLES Mens Fit Graphic Tee"></a>
+        <h3>TEENAGE NINJA TURTLES Mens Fit Graphic Tee</h3>
+        <p>₹500</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 9, 
+          name: 'TEENAGE NINJA TURTLES Mens Fit Graphic Tee', 
+          price: 500, 
+          img: 'images/ms9.avif'
+        })">Add to Cart</button>
+      </div>
+
+      <div class="shoe-item">
+        <a href="ms2.html"><img src="images/ms2.avif" alt="Mens Slim Fit Polo T-shirt"></a> 
+        <h3>Mens Slim Fit Polo T-shirt</h3>
+        <p>₹500</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 2, 
+          name: 'Mens Slim Fit Polo T-shirt', 
+          price: 500, 
+          img: 'images/ms2.avif'
+        })">Add to Cart</button>
+      </div>   
+      
+    </section>
+  </main>
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div class="row" style="display: flex; justify-content: space-between; align-items: flex-start;">
+  
+      <!-- Quick Links -->
+      <div class="footer-col" >
+        <h3>Quick Links</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+          <li ><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+          <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+          <li><a href="shoecare.html" style="color: white; text-decoration: none;">Shoe Care</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-col">
+        <h3>Categories</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="women-shoes.html">Women - Shoes</a></li>
+          <li ><a href="women-clothes.html">Women - Clothes</a></li>
+          <li ><a href="men-shoes.html">Men - Shoes</a></li>
+          <li ><a href="men-clothes.html">Men - Clothes</a></li>
+          <li ><a href="accessories.html">Accessories</a></li>
+          <li ><a href="sports.html">Sports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Trending Sports</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="sp13.html">Cricket</a></li>
+          <li ><a href="sp5.html">Football</a></li>
+          <li ><a href="sp2.html">Badminton</a></li>
+          <li ><a href="sp6.html">Tennis</a></li>
+        </ul> 
+      </div>
+
+
+      <!-- Social Media & Newsletter -->
+     <div class="footer-col">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+        </form>
+      </div>
+
+    </div>
+    <hr />
+    <p style="text-align: center;">&copy; 2025 Sports Gear - All rights reserved.</p>
+    <p style="text-align: center;">Safe Payment Options: <span>Debit Card</span> 
+  </div>
+</footer>
+
+<!-- Font Awesome Script for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- JS for Toggle menu -->
+<script src="assets/js/cart.js"></script>
+
+</body>
+</html>

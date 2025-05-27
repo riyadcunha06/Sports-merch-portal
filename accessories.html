@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign-in.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	<script src="/Sports_Ecommerce/Working_Copy/assets/js/search.js"></script>
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+       
+        <div class="navbar">
+          <div class="logo">
+            <a href="index.html">
+              <img src="./assets/images/logo.png" alt="Logo" width="125px" />
+            </a>
+          </div>
+          <nav>
+            <ul id="MenuItems">
+              <!-- Search Box -->
+              <li class="search-box">
+                <input type="text" id="searchBox" placeholder="Search for products..." autocomplete="off">
+				<div id="searchResults" class="search-results"></div>
+              </li>
+              <!-- Menu Links -->
+              <li><a href="index.html">Home</a></li>
+              <li class="dropdown">
+                <a href="women.html">Women</a>
+                <ul class="dropdown-menu">
+                    <li><a href="women-shoes.html">Shoes</a></li>
+                    <li><a href="women.html">Clothing</a></li>
+                </ul>
+            </li>
+              <!--<li><a href="men.html">Men</a></li>-->
+              <li class="dropdown">
+                <a href="men.html">Men</a>
+                <ul class="dropdown-menu">
+                    <li><a href="men.html">Shoes</a></li>
+                    <li><a href="men-clothing.html">Clothing</a></li>
+                </ul>
+            </li>
+              <li><a href="sports.html">Sports</a></li>
+              <li><a href="accessories.html">Accessories</a></li>
+              <!-- Dropdown Menu -->
+                <div class="dropdown">
+                  <a href="#" class="dropdown-button">Sign In</a>
+                  <ul class="dropdown-content">
+                      <li><a href="home.html">My Account</a></li>
+                      
+                      <li><a href="account.html" class="login-link">LOGIN</a></li>
+                      <li><a href="account.html" class="join-us-link">REGISTER</a></li>
+                  </ul>
+            	</div>
+          </nav>
+          <a href="cart.html">
+            <img src="./assets/images/cart.png" alt="Cart" width="30px" height="30px" />
+          </a>
+          <img 
+            src="./assets/images/menu.png"
+            alt="Menu Icon"
+            class="menu-icon"
+            onclick="menutoggle()" 
+          />
+        </div>
+  </header>
+  
+  <main>
+    <section id="shoe-collection">
+      <div class="shoe-item">
+        <a href="ac1.html"><img src="images/ac1.webp" alt="SLINGSHOT+"></a> 
+        <h3>Smart Band 4</h3>
+        <p>₹999</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 1, 
+          name: 'Smart Band 4', 
+          price: 999, 
+          img: 'images/ac1.webp'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="ac2.html"><img src="images/ac2.avif" alt="Head Badminton Racquet Ti.Power 85s"></a>
+        <h3>Road To Unity Unisex Cap</h3>
+        <p>₹300</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 2, 
+          name: 'Road To Unity Unisex Cap', 
+          price: 300, 
+          img: 'images/ac2.avif'
+        })">Add to Cart</button>
+      </div>           
+      <div class="shoe-item">
+        <a href="ac3.html"><img src="images/ac3.avif" alt="PUMA City Unisex Backpack"></a>
+        <h3>PUMA City Unisex Backpack</h3>
+        <p>₹800</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 3, 
+          name: 'PUMA City Unisex Backpack', 
+          price: 800, 
+          img: 'images/ac3.avif'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="ac4.html"><img src="images/ac4.avif" alt="Convertible Unisex Gym Bag"></a>
+        <h3>Convertible Unisex Gym Bag</h3>
+        <p>₹500</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 4, 
+          name: 'Convertible Unisex Gym Bag', 
+          price: 500, 
+          img: 'images/ac4.avif'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="ac5.html"><img src="images/ac5.avif" alt="Sports Quarter Unisex Socks Pack of 3"></a>
+        <h3>Sports Quarter Unisex Socks Pack of 3</h3>
+        <p>₹150</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 5, 
+          name: 'Sports Quarter Unisex Socks Pack of 3', 
+          price: 150, 
+          img: 'images/ac5.avif'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="ac6.html"><img src="images/ac6.avif" alt="Sportstyle Unisex Training Water Bottle"></a>
+        <h3>Sportstyle Unisex Training Water Bottle</h3>
+        <p>₹550</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 6, 
+          name: 'Sportstyle Unisex Training Water Bottle', 
+          price: 550, 
+          img: 'images/ac6.avif'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="ac7.html"><img src="images/ac7.avif" alt="ULTRA Pro RC Football Goalkeeper Gloves"></a>
+        <h3>ULTRA Pro RC Football Goalkeeper Gloves</h3>
+        <p>₹350</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 7, 
+          name: 'ULTRA Pro RC Football Goalkeeper Gloves', 
+          price: 350, 
+          img: 'images/ac7.avif'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="ac8.html"><img src="images/ac8.avif" alt="CA Pro Women's Wallet"></a>
+        <h3>CA Pro Women's Wallet</h3>
+        <p>₹590</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 8, 
+          name: 'CA Pro Womens Wallet', 
+          price: 590, 
+          img: 'images/ac8.avif'
+        })">Add to Cart</button>
+      </div>
+      <div class="shoe-item">
+        <a href="ac9.html"><img src="images/ac9.avif" alt="Manchester City Football Large Towel"></a>
+        <h3>Manchester City Football Large Towel</h3>
+        <p>₹200</p>
+        <button class="addtocart-btn" onclick="addToCart({
+          id: 9, 
+          name: 'Manchester City Football Large Towel', 
+          price: 200, 
+          img: 'images/ac9.avif'
+        })">Add to Cart</button>
+      </div>
+      
+      
+          
+    </section>
+  </main>
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div class="row" style="display: flex; justify-content: space-between; align-items: flex-start;">
+  
+      <!-- Quick Links -->
+      <div class="footer-col" >
+        <h3>Quick Links</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+          <li ><a href="about.html" style="color: white; text-decoration: none;">About</a></li>
+          <li><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></li>
+          <li><a href="shoecare.html" style="color: white; text-decoration: none;">Shoe Care</a></li>
+        </ul>
+      </div>
+
+      <!-- Categories -->
+      <div class="footer-col">
+        <h3>Categories</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="women-shoes.html">Women - Shoes</a></li>
+          <li ><a href="women-clothes.html">Women - Clothes</a></li>
+          <li ><a href="men-shoes.html">Men - Shoes</a></li>
+          <li ><a href="men-clothes.html">Men - Clothes</a></li>
+          <li ><a href="accessories.html">Accessories</a></li>
+          <li ><a href="sports.html">Sports</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Trending Sports</h3>
+        <ul style="list-style: none; padding: 0; margin: 20px 0 0 0;">
+          <li ><a href="sp13.html">Cricket</a></li>
+          <li ><a href="sp5.html">Football</a></li>
+          <li ><a href="sp2.html">Badminton</a></li>
+          <li ><a href="sp6.html">Tennis</a></li>
+        </ul> 
+      </div>
+
+
+      <!-- Social Media & Newsletter -->
+     <div class="footer-col">
+        <h3>Stay Connected</h3>
+        <div class="social-icons">
+          <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.whatsapp.com" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+        
+        </form>
+      </div>
+
+    </div>
+    <hr />
+    <p style="text-align: center;">&copy; 2025 Sports Gear - All rights reserved.</p>
+    <p style="text-align: center;">Safe Payment Options: <span>Debit Card</span> 
+  </div>
+</footer>
+
+<!-- Font Awesome Script for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!-- JS for Toggle menu -->
+<script src="assets/js/cart.js"></script>
+
+</body>
+</html>

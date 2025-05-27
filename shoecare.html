@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe Care Guide | Your Brand</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/sign-in.css" />
+</head>
+
+<body>
+  <div class="header">
+    <div class="container">
+     
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="./assets/images/logo.png" alt="Logo" width="125px" />
+          </a>
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <!-- Search Box -->
+            <li class="search-box">
+              <input type="text" placeholder="Search for products..." />
+            </li>
+            <!-- Menu Links -->
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+              <a href="women.html">Women</a>
+              <ul class="dropdown-menu">
+                  <li><a href="women-shoes.html">Shoes</a></li>
+                  <li><a href="women.html">Clothing</a></li>
+              </ul>
+          </li>
+            <!--<li><a href="men.html">Men</a></li>-->
+            <li class="dropdown">
+              <a href="men.html">Men</a>
+              <ul class="dropdown-menu">
+                  <li><a href="men.html">Shoes</a></li>
+                  <li><a href="men-clothing.html">Clothing</a></li>
+              </ul>
+          </li>
+            <li><a href="sports.html">Sports</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+              <a href="#" class="dropdown-button">Sign In</a>
+              <ul class="dropdown-content">
+                  <li><a href="home.html">My Account</a></li>
+                  <li><a href="#">Wishlist</a></li>
+                  <li><a href="#">Check Order</a></li>
+                  <li><a href="#">Store Finder</a></li>
+                  <li><div class="separator"></div></li>
+                  <li><a href="#">Language EN 🇮🇳</span></a></li>
+                  <li><div class="separator"></div></li>
+                  <li><a href="account.html" class="login-link">LOGIN</a></li>
+                  <li><a href="#" class="join-us-link">JOIN US</a></li>
+              </ul>
+          </div>
+          
+        </nav>
+        <a href="cart.html">
+          <img src="./assets/images/cart.png" alt="Cart" width="30px" height="30px" />
+        </a>
+        <img 
+          src="./assets/images/menu.png"
+          alt="Menu Icon"
+          class="menu-icon"
+          onclick="menutoggle()" 
+        />
+      </div>
+<style>
+    /* Base Styles */
+:root {
+    --primary-color: #242424;
+    --secondary-color: #ff5900;
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #666666;
+    --white: #ffffff;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--primary-color);
+    background-color: var(--white);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--medium-gray);
+}
+
+/* Header Styles */
+.page-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Intro Section */
+.intro-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.intro-text, .intro-image {
+    flex: 1;
+}
+
+.intro-image img {
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Materials Section */
+.material-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.material-card:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.material-image {
+    flex: 1;
+    max-width: 40%;
+}
+
+.material-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.material-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.material-content ul {
+    padding-left: 20px;
+}
+
+.material-content li {
+    margin-bottom: 10px;
+}
+
+/* Step-by-Step Cleaning Guide */
+.steps-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.step-number {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 8px;
+    flex-grow: 1;
+}
+
+/* Maintenance Tips */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.tip-card {
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.tip-icon {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+/* Recommended Products */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.product-card {
+    background-color: var(--light-gray);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.product-link:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Section */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    border: 1px solid var(--medium-gray);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    background-color: var(--light-gray);
+}
+
+.faq-answer {
+    padding: 0 20px 20px;
+    background-color: var(--white);
+}
+
+/* Footer */
+.page-footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-links {
+    margin-top: 20px;
+}
+
+.footer-links a {
+    color: var(--white);
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .intro-section {
+        flex-direction: column;
+    }
+    
+    .material-card, .material-card:nth-child(odd) {
+        flex-direction: column;
+    }
+    
+    .material-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .step-number {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .page-header {
+        padding: 50px 0;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+}
+
+</style>
+<body>
+    <header class="page-header">
+        <div class="container">
+            <h1>SHOE CARE GUIDE</h1>
+            <h2>Keep your kicks looking fresh with our expert care tips</h2>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <div class="intro-text">
+                <h2>Why Proper Shoe Care Matters</h2>
+                <p>Proper shoe care not only extends the life of your favorite footwear but also maintains their performance and appearance. Follow our comprehensive guide to keep your shoes looking and feeling their best.</p>
+            </div>
+            <div class="intro-image">
+                <img src="https://images.pexels.com/photos/6540980/pexels-photo-6540980.jpeg" alt="Shoe Care Kit">
+            </div>
+        </section>
+
+        <!-- Material Sections (No Tabs) -->
+        <section class="materials-section">
+            <h2>Care By Material</h2>
+            
+            <div class="material-card">
+                <div class="material-image">
+                    <img src="https://images.pexels.com/photos/5214139/pexels-photo-5214139.jpeg" alt="Leather Shoe Care">
+                </div>
+                <div class="material-content">
+                    <h3>Leather Care</h3>
+                    <ul>
+                        <li>Remove surface dirt with a soft brush or damp cloth</li>
+                        <li>Clean with a mild soap solution and soft cloth</li>
+                        <li>Apply leather conditioner to prevent drying and cracking</li>
+                        <li>Use a leather protector spray for water resistance</li>
+                        <li>Polish occasionally to maintain appearance</li>
+                        <li>Allow to dry naturally away from direct heat</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="material-card">
+                <div class="material-image">
+                    <img src="https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg" alt="Palmero Shoe Care">
+                </div>
+                <div class="material-content">
+                    <h3>Palmero Care</h3>
+                    <ul>
+                        <li>Clean with a soft, dry cloth to remove surface dust</li>
+                        <li>For light stains, use a specialized Palmero leather cleaner</li>
+                        <li>Apply Palmero conditioning cream every 2-3 months</li>
+                        <li>Avoid exposure to direct sunlight for extended periods</li>
+                        <li>Use shoe trees when not wearing to maintain shape</li>
+                        <li>Store in a breathable dust bag in a cool, dry place</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div class="material-card">
+                <div class="material-image">
+                    <img src="https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg" alt="Canvas Shoe Care">
+                </div>
+                <div class="material-content">
+                    <h3>Canvas & Mesh Care</h3>
+                    <ul>
+                        <li>Remove loose dirt with a soft brush</li>
+                        <li>Hand wash with mild soap and lukewarm water</li>
+                        <li>Use a soft brush to gently scrub stained areas</li>
+                        <li>Rinse thoroughly to remove soap residue</li>
+                        <li>Air dry completely before wearing</li>
+                        <li>Apply fabric protector to prevent future stains</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="material-card">
+                <div class="material-image">
+                    <img src="https://images.pexels.com/photos/2421374/pexels-photo-2421374.jpeg" alt="Synthetic Shoe Care">
+                </div>
+                <div class="material-content">
+                    <h3>Synthetic Material Care</h3>
+                    <ul>
+                        <li>Wipe with a damp cloth to remove surface dirt</li>
+                        <li>Clean with mild soap solution and soft cloth</li>
+                        <li>Rinse cloth thoroughly and wipe away soap residue</li>
+                        <li>Use specialized synthetic cleaner for tough stains</li>
+                        <li>Air dry at room temperature</li>
+                        <li>Apply synthetic protector spray periodically</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Step-by-Step Cleaning Guide -->
+        <section class="cleaning-guide">
+            <h2>Step-by-Step Cleaning Guide</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Prepare Your Shoes</h3>
+                        <p>Remove laces and insoles. Brush off loose dirt and debris.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Clean the Upper</h3>
+                        <p>Use appropriate cleaning method based on material (see material guides above).</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Clean Soles</h3>
+                        <p>Scrub outsoles with a brush and mild soap solution to remove dirt and grime.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Dry Properly</h3>
+                        <p>Allow shoes to air dry at room temperature. Avoid direct heat or sunlight.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Apply Protection</h3>
+                        <p>Once dry, apply appropriate protector spray based on material type.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Maintenance Tips -->
+        <section class="maintenance-tips">
+            <h2>Regular Maintenance Tips</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3>Rotate Your Shoes</h3>
+                    <p>Alternate between different pairs to allow shoes to fully dry and recover their shape between wears.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fas fa-wind"></i></div>
+                    <h3>Air Them Out</h3>
+                    <p>After wearing, allow your shoes to breathe before storing them to prevent odor and bacteria buildup.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fas fa-spray-can"></i></div>
+                    <h3>Protect Regularly</h3>
+                    <p>Reapply protector sprays every few weeks or after cleaning to maintain water and stain resistance.</p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon"><i class="fas fa-box"></i></div>
+                    <h3>Proper Storage</h3>
+                    <p>Store in a cool, dry place away from direct sunlight. Use shoe trees for premium footwear.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended Products (Static) 
+        <section class="recommended-products">
+            <h2>Recommended Care Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/4202325/pexels-photo-4202325.jpeg" alt="Shoe Cleaner">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Shoe Cleaner</h3>
+                        <p>All-purpose cleaner for various materials</p>
+                        <a href="#" class="product-link">Shop Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/5214102/pexels-photo-5214102.jpeg" alt="Suede Brush">
+                    </div>
+                    <div class="product-info">
+                        <h3>Suede Brush Kit</h3>
+                        <p>Specialized brush for suede and nubuck</p>
+                        <a href="#" class="product-link">Shop Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/6044266/pexels-photo-6044266.jpeg" alt="Protector Spray">
+                    </div>
+                    <div class="product-info">
+                        <h3>Water & Stain Repellent</h3>
+                        <p>All-weather protection for your footwear</p>
+                        <a href="#" class="product-link">Shop Now</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.pexels.com/photos/4465124/pexels-photo-4465124.jpeg" alt="Shoe Freshener">
+                    </div>
+                    <div class="product-info">
+                        <h3>Shoe Freshener</h3>
+                        <p>Eliminates odors and keeps shoes fresh</p>
+                        <a href="#" class="product-link">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+        <!-- FAQ Section (Static) -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How often should I clean my shoes?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It depends on how frequently you wear them and the conditions they're exposed to. As a general rule, light cleaning after every few wears and deep cleaning once a month for regularly worn shoes is recommended.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I machine wash my shoes?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We don't recommend machine washing as it can damage the structure and materials of your shoes. Hand cleaning using appropriate methods for each material is always preferable.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I remove bad odors from my shoes?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To eliminate odors, sprinkle baking soda inside your shoes and let it sit overnight. You can also use specialized shoe deodorizers or fabric fresheners. Ensuring shoes dry completely between wears helps prevent odor buildup.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How can I protect white shoes from yellowing?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Store white shoes away from direct sunlight, as UV rays can cause yellowing. Apply a UV-protective spray, clean them regularly, and use white shoe polish or specialized whitening products to maintain their brightness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <div class="container">
+            <p>For more information about our products and care recommendations, contact our customer service team.</p>
+            <div class="footer-links">
+                <a href="#">Contact Us</a>
+                <a href="#">Product Care</a>
+                <a href="#">Returns & Exchanges</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
