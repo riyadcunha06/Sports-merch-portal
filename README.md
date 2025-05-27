@@ -28,17 +28,20 @@ Email Service:
 
 Server:  
 
-**Apache Tomcat** – Web server for deploying JSP and servlets  
+**Apache Tomcat** – Web server for deploying JSP and servlets.  
+
+
 **Features**  
-User Registration & Login-Secure user authentication with session management.  
-Product Browsing by Categories-Explore products under Men, Women, Sports, and Accessories.  
-Search and Filter-Quickly find products using keyword search and category-based filtering.  
-Add to Cart & Checkout-Seamless shopping experience with cart management and order placement.  
-Order Summary Page-Displays purchase confirmation and detailed order information after checkout.  
-Customizable Payment Gateway - Created a payment gateway of my own for easy flow of funds from users account to merchants account
+1.User Registration & Login-Secure user authentication with session management.  
+2.Product Browsing by Categories-Explore products under Men, Women, Sports, and Accessories.  
+3.Search and Filter-Quickly find products using keyword search and category-based filtering.  
+4.Add to Cart & Checkout-Seamless shopping experience with cart management and order placement.  
+5.Order Summary Page-Displays purchase confirmation and detailed order information after checkout.  
+6.Customizable Payment Gateway - Created a payment gateway of my own for easy flow of funds from users account to merchants account
 
 Email Notifications
-Sends transactional emails (OTP for login, order confirmations) using JavaMail API.
+Sends transactional emails (OTP for login, order confirmations) using JavaMail API.  
+
 ***Screenshots***
 ![image](https://github.com/user-attachments/assets/1cecb7b9-cfd3-4e3a-9734-d304faef1ac2)
 ![image](https://github.com/user-attachments/assets/cfc9044d-ad04-4d2b-b0ed-d759ea5f087a)
